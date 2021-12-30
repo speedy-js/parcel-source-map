@@ -1,3 +1,6 @@
+> This is a fork of the Parcel source-map library. For more details you may refer to the original repo.
+
+
 # Parcel's source-map library
 
 A source map library purpose-build for the Parcel bundler with a focus on fast combining and manipulating of source-maps.
