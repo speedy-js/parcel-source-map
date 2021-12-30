@@ -159,8 +159,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: bahmutov/npm-install@v1.1.0
-      - name: Install wasm-pack
-        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+#      - name: Install wasm-pack
+#        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
       - name: Download artifacts
         uses: actions/download-artifact@v2
         with:
@@ -170,23 +170,23 @@ jobs:
       - run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Build wasm-web release
-        run: yarn run build:wasm-web-release
+#      - name: Build wasm-web release
+#        run: yarn run build:wasm-web-release
       - run: npm publish
-
-  release-crates:
-    runs-on: ubuntu-latest
-    name: Release Rust crate
-    steps:
-      - uses: actions/checkout@v1
-      - uses: bahmutov/npm-install@v1.1.0
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          profile: minimal
-          override: true
-      - run: cargo login ${CRATES_IO_TOKEN}
-        env:
-          CRATES_IO_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
-      - run: cd parcel_sourcemap && cargo publish
+#
+#  release-crates:
+#    runs-on: ubuntu-latest
+#    name: Release Rust crate
+#    steps:
+#      - uses: actions/checkout@v1
+#      - uses: bahmutov/npm-install@v1.1.0
+#      - name: Install Rust
+#        uses: actions-rs/toolchain@v1
+#        with:
+#          toolchain: stable
+#          profile: minimal
+#          override: true
+#      - run: cargo login ${CRATES_IO_TOKEN}
+#        env:
+#          CRATES_IO_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
+#      - run: cd parcel_sourcemap && cargo publish

@@ -1,5 +1,5 @@
 {
-  "name": "@parcel/source-map",
+  "name": "@speedy-js/parcel-source-map",
   "version": "2.0.1",
   "main": "./dist/node.js",
   "types": "index.d.ts",
@@ -84,5 +84,9 @@
   "browser": {
     "./dist/node.js": "./dist/wasm.js",
     "./dist/wasm-bindings.js": "./dist/wasm-bindings-web.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }
