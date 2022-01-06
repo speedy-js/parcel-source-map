@@ -9,7 +9,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 js-sys = "0.3"
-parcel_sourcemap = {path = "../parcel_sourcemap", features = ["skip_napi", "wasm"]}
+speedy_parcel_sourcemap = {path = "../parcel_sourcemap", features = ["skip_napi", "wasm"]}
 rkyv = "0.6.7"
 serde = {version = "1.0", features = ["derive"]}
 wasm-bindgen = {version = "0.2", features = ["serde-serialize"]}

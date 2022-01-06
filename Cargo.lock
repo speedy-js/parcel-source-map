@@ -176,18 +176,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8a385494dac3c52cbcacb393bb3b42669e7db8ab240c7ad5115f549eb061f2cc"
 
 [[package]]
-name = "parcel_sourcemap"
-version = "2.0.0"
-dependencies = [
- "js-sys",
- "napi",
- "napi-derive",
- "rkyv",
- "vlq",
- "wasm-bindgen",
-]
-
-[[package]]
 name = "parcel_sourcemap_node"
 version = "2.0.1"
 dependencies = [
@@ -195,10 +183,10 @@ dependencies = [
  "napi",
  "napi-build",
  "napi-derive",
- "parcel_sourcemap",
  "rkyv",
  "serde",
  "serde_json",
+ "speedy_parcel_sourcemap",
 ]
 
 [[package]]
@@ -206,9 +194,9 @@ name = "parcel_sourcemap_wasm"
 version = "2.0.1"
 dependencies = [
  "js-sys",
- "parcel_sourcemap",
  "rkyv",
  "serde",
+ "speedy_parcel_sourcemap",
  "wasm-bindgen",
 ]
 
@@ -314,6 +302,18 @@ dependencies = [
  "itoa",
  "ryu",
  "serde",
+]
+
+[[package]]
+name = "speedy_parcel_sourcemap"
+version = "2.0.2"
+dependencies = [
+ "js-sys",
+ "napi",
+ "napi-derive",
+ "rkyv",
+ "vlq",
+ "wasm-bindgen",
 ]
 
 [[package]]

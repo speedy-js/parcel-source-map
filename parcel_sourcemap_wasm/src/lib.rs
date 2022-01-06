@@ -1,9 +1,9 @@
 #![deny(clippy::all)]
 
-extern crate parcel_sourcemap;
+extern crate speedy_parcel_sourcemap;
 
 use js_sys::Uint8Array;
-use parcel_sourcemap::{Mapping, OriginalLocation, SourceMap as NativeSourceMap};
+use speedy_parcel_sourcemap::{Mapping, OriginalLocation, SourceMap as NativeSourceMap};
 use rkyv::AlignedVec;
 use serde::Serialize;
 use std::convert::TryFrom;

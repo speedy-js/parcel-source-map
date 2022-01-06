@@ -10,7 +10,7 @@ crate-type = ["cdylib"]
 [dependencies]
 napi = {version = "2", default-features = false, features = ["napi4", "serde-json", "latin1"]}
 napi-derive = {version = "2", default-features = false}
-parcel_sourcemap = {path = "../parcel_sourcemap", features = ["native"]}
+speedy_parcel_sourcemap = {path = "../parcel_sourcemap", features = ["native"]}
 rkyv = "0.6.7"
 serde = "1"
 serde_json = "1"

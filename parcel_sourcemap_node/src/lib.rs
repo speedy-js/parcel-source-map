@@ -1,10 +1,10 @@
 #[macro_use]
 extern crate napi_derive;
-extern crate parcel_sourcemap;
 extern crate rkyv;
+extern crate speedy_parcel_sourcemap;
 
 use napi::{bindgen_prelude::*, Env, JsString};
-use parcel_sourcemap::{Mapping, OriginalLocation, SourceMap};
+use speedy_parcel_sourcemap::{Mapping, OriginalLocation, SourceMap};
 use rkyv::AlignedVec;
 use serde_json::{from_str, to_string};
 
