@@ -9,6 +9,7 @@ repository = "https://github.com/parcel-bundler/source-map"
 version = "2.0.2"
 
 [features]
+default = ["native"]
 native = ["napi"]
 skip_napi = ["napi-derive/noop"]
 wasm = ["js-sys", "wasm-bindgen", "napi-derive/noop"]
